@@ -5,6 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour, IDamageable
 {
     float health = 100f;
+    public bool IsAlive = true;
 
     public void Damage(float damage)
     {
@@ -12,6 +13,7 @@ public class Enemy : MonoBehaviour, IDamageable
         if (health <= 0)
         {
             Destroy(gameObject);
+            IsAlive = false;
         }
     }
 }

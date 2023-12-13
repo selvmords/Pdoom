@@ -747,6 +747,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1898740173964542799
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1251542031440303045}
+  m_Layer: 0
+  m_Name: Muzzle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1251542031440303045
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1898740173964542799}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.3414, y: -0.1981, z: 1.6455}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4124086919388895876}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2012797851508134084
 GameObject:
   m_ObjectHideFlags: 0
@@ -1053,6 +1084,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4124086919388895876}
   - component: {fileID: 8549886828005814899}
+  - component: {fileID: 5350793248919194915}
   m_Layer: 0
   m_Name: WeaponHolder
   m_TagString: Untagged
@@ -1074,6 +1106,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 321910012056002020}
+  - {fileID: 1251542031440303045}
   m_Father: {fileID: 4374016811519001783}
   m_LocalEulerAnglesHint: {x: 0, y: -1.826, z: 0}
 --- !u!114 &8549886828005814899
@@ -1089,6 +1122,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraTransform: {fileID: 5805598644567471229}
+  bobbingSpeed: 1
+  bobbingAmount: 0.02
+--- !u!114 &5350793248919194915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2996676147723177797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78eec78e375109944ad71d1a43307d81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gunData: {fileID: 11400000, guid: fbe4c7bd860690d46a7c721c1bd8d0ee, type: 2}
+  muzzle: {fileID: 1251542031440303045}
+  ammoText: {fileID: 0}
+  weaponTransform: {fileID: 321910012056002020}
+  rotationSpeed: 260
+  spinTime: 1.5
 --- !u!1 &3296281023628627871
 GameObject:
   m_ObjectHideFlags: 0
@@ -1413,7 +1466,7 @@ Transform:
   - {fileID: 6216703871453897819}
   - {fileID: 1692604289543701569}
   m_Father: {fileID: 4124086919388895876}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 2.067, z: 0}
 --- !u!1 &3786003151903520132
 GameObject:
   m_ObjectHideFlags: 0
@@ -2118,7 +2171,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4292646568938942781}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ca5a41224a5e4740aef1db09031c243, type: 3}
   m_Name: 

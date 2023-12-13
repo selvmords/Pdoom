@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 741399746426432087}
   - component: {fileID: 8490037801974590674}
   - component: {fileID: 5836706518481268866}
+  - component: {fileID: 1769712432250569660}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -76,8 +77,8 @@ Rigidbody:
   m_GameObject: {fileID: 3858821791017801766}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
+  m_Drag: 0.5
+  m_AngularDrag: 0.5
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -106,8 +107,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc9a95e5802598540b74b78f7f6a0e76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 7
+  moveSpeed: 5
+  jumpForce: 10
   orientation: {fileID: 1999955015661000535}
+  playerPhysicsMaterial: {fileID: 13400000, guid: 97042344df573964cb28c7fd3b6a9c3c, type: 2}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1769712432250569660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3858821791017801766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d77012d9f49d510478b3765524870d69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7212881979377028700
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,7 +258,7 @@ Transform:
   m_GameObject: {fileID: 8979256965546900950}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.8, z: 0}
+  m_LocalPosition: {x: 0, y: 0.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
